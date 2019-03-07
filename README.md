@@ -7,9 +7,15 @@
 
 # Context MAP
 
+# Dependecies
+* https://golang.org/doc/install
+* [kardianos/govendor](https://github.com/kardianos/govendor)
 
-# Tools
-#### [kardianos/govendor](https://github.com/kardianos/govendor)
+
+# Run app
+* `govendor sync`
+* `go run ./cmd/main.go`
+
 # TECNOLIGIES
 #### [gin-gonic/gin](https://gin-gonic.github.io/gin/)
 #### [gorilla/mux](https://github.com/gorilla/mux)
