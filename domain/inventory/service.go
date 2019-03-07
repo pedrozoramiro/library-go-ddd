@@ -2,6 +2,7 @@ package inventory
 
 type Service interface {
 	FindAllBooks() []Book
+	CreateBook(book Book)
 }
 
 type service struct {
@@ -16,4 +17,8 @@ func NewService(repository Repository) *service {
 
 func (s *service) FindAllBooks() []Book {
 	return s.repository.FindAllBooks()
+}
+
+func (s *service) CreateBook(book Book) {
+	s.repository.CreateBook(book)
 }

@@ -2,6 +2,7 @@ package hardcode
 
 import (
 	"library-go-ddd/domain/inventory"
+	"log"
 )
 
 type BookRepository struct{}
@@ -15,4 +16,10 @@ func (BookRepository) FindAllBooks() []inventory.Book {
 		inventory.Book{Name: "Patterns, Principles and Practices of Domain-Driven Design", Author: "Scott Millett"},
 	}
 	return books
+}
+
+func (BookRepository) CreateBook(book inventory.Book) {
+
+	log.Print(book.Name)
+	log.Printf("%s %s", book.Name, book.Author)
 }
